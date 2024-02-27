@@ -1,9 +1,8 @@
 import random
-import math
 
 #Explanation of the game to the User
 print ("Hello and welcome to the Number guessing game!")
-print ("The propuse of this game is to guess a random number inside an interval")
+print ("The propuse of this game is to guess a random number inside an interval chosen by you")
 print ("It is only accepted integer numbers")
 
 #It is asked the number trying to avoid any user mistake
@@ -15,27 +14,27 @@ while True:
     except:
         print ("Please enter a valid number")
 
-#Created and generated the random number
+#Generated the random number inside the interval
 objective = random.randint(lower, higher)
 
 guess = int
 count = 0
 
-#It is checked the valid number introduced every time and compared to the
-#objective number indicated if it is higher or lower
+#It is checked a valid value is introduced every time and compared to the
+#objective number indicateing if it is higher or lower
 while guess!=objective:
     count = count + 1
     while True:
         try:
-            guess = int(input("Enter guessed number: "))
+            guess = int(input("Guess the number: "))
             break
         except:
             print ("Please enter a valid number")
     if (guess < objective):
-        print ("The number is higher")
+        print ("Try again! The number is higher")
     else: 
-        print ("The number is lower")
+        print ("Try again! The number is lower")
 
-#Solution
-print ("You guess the correct number " + str(objective))
-print (f"You did it in just {count}!")
+#Final statment
+print ("Congratulations! You guessed the correct number " + str(objective))
+print (f"You did it in just {count} times!")
