@@ -38,15 +38,4 @@ while guess!=objective:
 
 #Solution
 print ("You guess the correct number " + str(objective))
-print (f"You did it in just {count}")
-
-    
-
-
-    
-
-
-
-
-
-
+print (f"You did it in just {count}!")
